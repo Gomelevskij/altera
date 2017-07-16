@@ -1,0 +1,284 @@
+/* Include fonts */
+@font-face {
+  font-family: 'robotoregular';
+  src: url('../../fonts/robotoregular.woff2') format('woff2'),
+  url('../../fonts/robotoregular.woff') format('woff'),
+  url('../../fonts/robotoregular.ttf') format('truetype'),
+  url('../../fonts/robotoregular.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotolight';
+  src: url('../../fonts/roboto-light.woff2') format('woff2'),
+  url('../../fonts/roboto-light.woff') format('woff'),
+  url('../../fonts/roboto-light.ttf') format('truetype'),
+  url('../../fonts/roboto-light.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: robotoregular;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.navigation-investors {
+  height: 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow: hidden;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+
+  .logo {
+    display: table-cell;
+    vertical-align: top;
+    height: 80px;
+    width: 94px;
+    background-color: #30393f;
+    background-image: url('../../img/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 36px;
+  }
+
+  .nav-ul {
+    display: table-cell;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      height: 80px;
+      line-height: 80px;
+      width: 16%;
+      text-align: center;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  .btn-container {
+    display: table-cell;
+    overflow: hidden;
+    width: 517px;
+    box-sizing: border-box;
+
+    &_number {
+      font-family: 'robotoregular';
+      padding: 0 38px 0 24px;
+      margin: 15px 0;
+      box-sizing: border-box;
+      color: #fff;
+      font-size: 14px;
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+      float: left;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    &_base-project, &_feedback {
+      width: 176px;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      font-family: 'robotoregular';
+      color: #fff;
+      font-size: 14px;
+      float: left;
+    }
+
+    &_base-project {
+      background-color: #665cac;
+
+      &:before {
+        content: url('../../img/objects.svg');
+        display: inline-block;
+        margin-right: 10px;
+        position: relative;
+        top: 2px;
+      }
+    }
+
+    &_feedback {
+      background-color: #30393f;
+
+      &:before {
+        content: url('../../img/mail.svg');
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+
+  }
+}
+
+#fullpage-investors {
+  .section {
+    position: relative;
+    z-index: 10;
+  }
+
+  .header {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+    &_footnote {
+      font-family: 'robotoregular';
+      font-size: 14px;
+      color: #fff;
+      margin-bottom: 0;
+    }
+  }
+
+  h1 {
+    color: #fff;
+    font-family: 'robotolight';
+    font-size: 38px;
+    margin-bottom: 25px;
+    text-align: left;
+    line-height: 48px;
+  }
+
+  h2 {
+    color: #fff;
+    font-family: 'robotolight';
+    font-size: 38px;
+    margin-bottom: 25px;
+    text-align: left;
+    line-height: 48px;
+  }
+
+  p {
+    font-family: 'robotoregular';
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-container {
+    max-width: 615px;
+    margin: 0 auto;
+  }
+
+  .around-block {
+    margin-top: 90px;
+    margin-bottom: 45px;
+
+    &__item {
+      color: #fff;
+      font-family: 'robotoregular';
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 18px;
+      margin-right: 30px;
+      position: relative;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      span {
+        position: absolute;
+        top: 22px;
+        left: 7px;
+        font-family: 'robotoregular';
+        color: #fff;
+        width: 56px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .circle {
+        width: 65px;
+        height: 65px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+      }
+
+      circle {
+        fill: rgba(0,0,0,0);
+        stroke: rgba(255, 255, 255, 0.35);
+        stroke-width: 4;
+        stroke-dasharray: 408px 408px;
+      }
+
+      circle:nth-child(2n) {
+        fill: rgba(0,0,0,0);
+        stroke: #fff;
+        stroke-width: 4;
+      }
+    }
+  }
+
+  .link-play {
+    width: 80px;
+    height: 80px;
+    display: block;
+    background-image: url('../../img/play.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 120px auto;
+  }
+
+  .back-top {
+    transform: rotate(270deg);
+    font-family: 'robotoregular';
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: absolute;
+    right: 87px;
+    bottom: 95px;
+
+    &:before {
+      content: '';
+      width: 25px;
+      height: 2px;
+      display: inline-block;
+      background-color: #fff;
+      position: relative;
+      top: -3px;
+      left: -8px;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+
+      &:before {
+        left: -14px;
+      }
+    }
+  }
+
+  .section2 {
+    background-image: url('../../images/bg-2.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+  }
+}
+
+
