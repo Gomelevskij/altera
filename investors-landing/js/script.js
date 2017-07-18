@@ -58,4 +58,23 @@ $(document).ready(function() {
        $('#menu li[data-menuanchor="section1"]').trigger('click');
     });
 
+    // Tabs
+    $(".tabs>a").click( function () {
+
+        $(".tabs>a").removeClass("active");
+        $(this).addClass("active");
+
+        $(".tabs-content>div").hide();
+        var t_content=$(this).attr("href");
+        $(t_content).show();
+
+        return false
+    })
+    $("#tabs>a:first").trigger("click");
+
+    // Control windows to screen two
+    $('.invest-control__item').click(function() {
+       $('.main-control').hide();
+       $('.control-container').fadeIn("slow");
+    });
 });
