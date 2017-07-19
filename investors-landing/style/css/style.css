@@ -349,3 +349,17 @@ a:hover {
 #fullpage-investors .section1 .control-container .tabs-content_item {
   color: #fff;
 }
+#fullpage-investors .section1 .control-container .tabs-content_item h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+#fullpage-investors .section1 .control-container .tabs-content_item p {
+  text-align: left;
+  min-height: 290px;
+  overflow: hidden;
+}
+#fullpage-investors .section1 .control-container .tabs-content_item .btn {
+  text-align: left;
+  margin-top: 10px;
+  float: left;
+}
