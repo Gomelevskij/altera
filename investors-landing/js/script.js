@@ -68,13 +68,19 @@ $(document).ready(function() {
         var t_content=$(this).attr("href");
         $(t_content).show();
 
-        return false
-    })
-    $("#tabs>a:first").trigger("click");
+        return false;
+    });
 
-    // Control windows to screen two
+
+    // Control windows to screen two block bizness
     $('.invest-control__item').click(function() {
        $('.main-control').hide();
+       $('.tabs-content_item').hide();
+        $(".tabs>a").removeClass("active");
        $('.control-container').fadeIn("slow");
-    });
+        var t_content=$(this).find("a").attr("href");
+        $(".tabs>a[href='" + t_content + "']").addClass("active");
+        $(t_content).show();
+    })
+
 });
