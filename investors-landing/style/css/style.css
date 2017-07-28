@@ -146,8 +146,8 @@ a:hover {
 #fullpage-investors p {
   font-family: 'robotoregular';
   color: #fff;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 14px;
+  line-height: 24px;
 }
 #fullpage-investors .btn {
   padding: 16px 40px;
@@ -199,6 +199,7 @@ a:hover {
   width: 56px;
   text-align: center;
   font-size: 14px;
+  line-height: 24px;
 }
 #fullpage-investors .around-block__item .circle {
   width: 65px;
@@ -253,9 +254,9 @@ a:hover {
   left: -14px;
 }
 #fullpage-investors .section1 {
-  background-image: url('../../images/bg2.jpg');
+  background-image: url(../../images/bg2.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: 100%;
 }
 #fullpage-investors .section1_invest-control {
