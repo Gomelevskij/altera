@@ -149,6 +149,9 @@ a:hover {
   font-size: 14px;
   line-height: 24px;
 }
+#fullpage-investors span.rub:before {
+  content: '\20BD';
+}
 #fullpage-investors .btn {
   padding: 16px 40px;
   display: inline-block;
@@ -409,7 +412,7 @@ a:hover {
   float: left;
 }
 #fullpage-investors .section1 .control-container .tabs-content .bz-list {
-  margin: 47px 0 0 30px;
+  margin: 47px 0 0 66px;
   padding: 0;
   text-align: left;
   overflow: hidden;
@@ -644,4 +647,114 @@ a:hover {
   margin: 0 8px;
   background-color: #eaeaea;
   border-radius: 100%;
+}
+#fullpage-investors .section2 {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+#fullpage-investors .section2 .block-statistic .stat-item {
+  margin: 35px 0 0 0;
+}
+#fullpage-investors .section2 .block-statistic .stat-item-cat {
+  margin-top: 10px;
+  color: #fff;
+  opacity: 0.4;
+  font-size: 14px;
+  font-family: 'robotoregular';
+  text-transform: uppercase;
+}
+#fullpage-investors .section2 .block-statistic .stat-item-cat:before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 2px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  opacity: 0.2;
+}
+#fullpage-investors .section2 .block-statistic .stat-item-val {
+  font-family: 'robotolight';
+  color: #fff;
+  font-size: 24px;
+}
+#fullpage-investors .section2 .block-statistic .statistic-box {
+  margin-bottom: 20px;
+}
+#fullpage-investors .section2 .block-statistic .statistic-box-legend {
+  margin: 0;
+  padding: 0;
+}
+#fullpage-investors .section2 .block-statistic .statistic-box-legend div {
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'robotoregular';
+}
+#fullpage-investors .section2 .block-statistic .statistic-box-legend div:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+#fullpage-investors .section2 .block-statistic .statistic-box-legend div.biz:before {
+  background-color: #2b8bca;
+}
+#fullpage-investors .section2 .block-statistic .statistic-box-legend div.fr:before {
+  background-color: #3fc380;
+}
+#fullpage-investors .section2 .block-statistic .statistic-box-legend div.invest:before {
+  background-color: #665cac;
+}
+#fullpage-investors .section2 .block-statistic .statistic-box-slider-label {
+  color: #fff;
+  opacity: 0.4;
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-family: 'robotoregular';
+}
+#fullpage-investors .section2 .block-statistic .statistic-box-slider-val {
+  font-family: 'robotolight';
+  color: #fff;
+  font-size: 24px;
+}
+#fullpage-investors .section2 .block-statistic .statistic-box-slider .slider.noUi-horizontal {
+  height: 2px;
+}
+#fullpage-investors .section2 .block-statistic .statistic-box-slider .slider.noUi-target {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  border: none;
+  box-shadow: none;
+  margin-top: 16px;
+}
+#fullpage-investors .section2 .block-statistic .statistic-box-slider .slider .noUi-handle {
+  border: none;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  top: -14px;
+  outline: none !important;
+}
+#fullpage-investors .section2 .block-statistic .statistic-box-slider .slider .noUi-handle:before,
+#fullpage-investors .section2 .block-statistic .statistic-box-slider .slider .noUi-handle:after {
+  display: none;
+}
+#fullpage-investors .section2 .block-statistic .statistic-box-slider .slider .noUi-handle-lower {
+  display: none;
+}
+#fullpage-investors .section2 .block-statistic .statistic-box-slider .slider .noUi-connect {
+  box-shadow: none;
+  border: none;
+  border-radius: 100px;
+  background-color: #fff;
+}
+#fullpage-investors .section2 .block-statistic .statistic-box .chart {
+  margin-top: 37px;
 }

@@ -9,6 +9,7 @@
 
     <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="lib/fullpage/jquery.fullpage.min.css" rel="stylesheet">
+    <link href="lib/nouislider/nouislider.min.css" rel="stylesheet">
     <link href="style/css/style.css" rel="stylesheet">
     <link href="style/css/media.css" rel="stylesheet">
 
@@ -352,16 +353,66 @@
             </div>
         </div>
     </div>
-    <div class="section section3">3</div>
-    <div class="section section4">4</div>
-    <div class="section section5">5</div>
-    <div class="section section6">6</div>
+    <div class="section section2" style="background-image: url('images/bg3.jpg');">
+        <div class="block-statistic">
+            <h2 class="text-center">Хочу приумножить</h2>
+            <div class="row">
+                <div class="col-md-offset-1 col-md-4">
+                    <p class="text">
+                        Таким образом сложившаяся структура организации влечет за
+                        собой процесс внедрения и модернизации систем массового участия.
+                        Идейные соображения высшего порядка, а также консультация с
+                        широким активом позволяет оценить значение соответствующий
+                        условий активизации.
+                    </p>
+                    <div class="stat">
+                        <div class="stat-item">
+                            <div class="stat-item-cat">Готовый бизнес</div>
+                            <div class="stat-item-val">15% доходность</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-item-cat">франшизы</div>
+                            <div class="stat-item-val">10% доходность</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-item-cat">инвест-проекты</div>
+                            <div class="stat-item-val">8% доходность</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="statistic-box">
+                        <div class="row">
+                            <div class="col-md-offset-1 col-md-3 statistic-box-legend">
+                                <div class="biz">Готовый бизнес</div>
+                                <div class="fr">Франшизы</div>
+                                <div class="invest">Инвестиционные проекты</div>
+                            </div>
+                            <div class="col-md-8 statistic-box-slider">
+                                <div class="statistic-box-slider-label">Сумма вложений</div>
+                                <div id="sliderVal" class="statistic-box-slider-val"></div>
+                                <div id="rangeSlider" class="slider"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="container" class="chart" style="width:100%; height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section3">4</div>
+    <div class="section section4">5</div>
+    <div class="section section5">6</div>
 </div>
 
 
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/bootstrap/bootstrap.min.js"></script>
     <script src="lib/fullpage/jquery.fullpage.min.js"></script>
+    <script src="lib/nouislider/nouislider.min.js"></script>
+    <script src="lib/highcharts/highcharts.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -81,6 +81,67 @@ $(document).ready(function() {
         var t_content=$(this).find("a").attr("href");
         $(".tabs>a[href='" + t_content + "']").addClass("active");
         $(t_content).show();
-    })
+    });
+
+    // noUiSlider init
+    var rangeSlider = document.getElementById('rangeSlider'),
+        rangeSliderValueElement = document.getElementById('sliderVal');
+
+    noUiSlider.create(rangeSlider, {
+        start: [ 0, 700000 ],
+        connect: true,
+        range: {
+            'min': [  500000 ],
+            'max': [ 1000000 ]
+        }
+    });
+
+    rangeSlider.noUiSlider.on('update', function( values, handle ) {
+
+        var num = Math.round(values[handle]);
+        formatNumber(num, '-');
+
+    });
+
+    /**
+     * Formats number like 100000000 => 100 000 000
+     * @param x - number - source tah will be formatted;
+     * @param gag - string - will be returned if x is not number;
+     * @returns {string}
+     */
+    function formatNumber(x, gag) {
+        if (!x) return gag || '';
+        const parts = x.toString().split('.');
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+
+        rangeSliderValueElement.innerHTML = parts + " <span class='rub'></span>";
+    }
+
+    // Chart
+    $(function () {
+        var myChart = Highcharts.chart('container', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Fruit Consumption'
+            },
+            xAxis: {
+                categories: ['Apples', 'Bananas', 'Oranges']
+            },
+            yAxis: {
+                title: {
+                    text: 'Fruit eaten'
+                }
+            },
+            series: [{
+                name: 'Jane',
+                data: [1, 0, 4]
+            }, {
+                name: 'John',
+                data: [5, 7, 3]
+            }]
+        });
+    });
 
 });
