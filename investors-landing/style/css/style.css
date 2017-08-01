@@ -23,6 +23,9 @@ body {
 a:hover {
   text-decoration: none;
 }
+a:focus {
+  text-decoration: none !important;
+}
 .navigation-investors {
   height: 80px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -680,9 +683,13 @@ a:hover {
 }
 #fullpage-investors .section2 .block-statistic .statistic-box {
   margin-bottom: 20px;
+  background-image: linear-gradient(68deg, #485563, #29323c);
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
 }
 #fullpage-investors .section2 .block-statistic .statistic-box-legend {
-  margin: 0;
   padding: 0;
 }
 #fullpage-investors .section2 .block-statistic .statistic-box-legend div {
@@ -757,4 +764,45 @@ a:hover {
 }
 #fullpage-investors .section2 .block-statistic .statistic-box .chart {
   margin-top: 37px;
+}
+.highcharts-background {
+  fill: transparent;
+}
+.highcharts-legend,
+.highcharts-yaxis,
+.highcharts-axis-line,
+.highcharts-axis,
+.highcharts-title {
+  display: none;
+}
+.highcharts-axis-labels text {
+  color: #fff !important;
+  fill: #fff !important;
+}
+.highcharts-grid-line {
+  stroke: rgba(236, 236, 236, 0.2);
+}
+.highcharts-xaxis-grid .highcharts-grid-line {
+  stroke: transparent;
+}
+.highcharts-color-0 .highcharts-area {
+  fill: rgba(43, 139, 202, 0.5);
+}
+.highcharts-color-0 .highcharts-graph {
+  fill: transparent;
+  stroke: #2b8bca;
+}
+.highcharts-color-1 .highcharts-area {
+  fill: rgba(63, 195, 128, 0.5);
+}
+.highcharts-color-1 .highcharts-graph {
+  fill: transparent;
+  stroke: #3fc380;
+}
+.highcharts-color-2 .highcharts-area {
+  fill: rgba(102, 92, 172, 0.51);
+}
+.highcharts-color-2 .highcharts-graph {
+  fill: transparent;
+  stroke: #665cac;
 }

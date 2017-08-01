@@ -103,6 +103,12 @@ $(document).ready(function() {
 
     });
 
+    rangeSlider.noUiSlider.on('end', function( values, handle ) {
+
+        
+
+    });
+
     /**
      * Formats number like 100000000 => 100 000 000
      * @param x - number - source tah will be formatted;
@@ -119,27 +125,47 @@ $(document).ready(function() {
 
     // Chart
     $(function () {
-        var myChart = Highcharts.chart('container', {
+        var chart = Highcharts.chart('container', {
             chart: {
-                type: 'bar'
-            },
-            title: {
-                text: 'Fruit Consumption'
+                type: 'areaspline'
             },
             xAxis: {
-                categories: ['Apples', 'Bananas', 'Oranges']
+                categories: [
+                    '2014',
+                    '2015',
+                    '2016',
+                    '2017',
+                    '2018',
+                    '2019',
+                    '2020'
+                ]
             },
-            yAxis: {
-                title: {
-                    text: 'Fruit eaten'
+            credits: {
+                enabled: false
+            },
+            tooltip: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: false,
+                        states: {
+                            hover: {
+                                enabled: false
+                            }
+                        }
+                    }
                 }
             },
             series: [{
-                name: 'Jane',
-                data: [1, 0, 4]
-            }, {
-                name: 'John',
-                data: [5, 7, 3]
+                data: [0, 40, 30, 50, 40, 10, 40]
+            },
+            {
+                data: [0, 10, 20, 30, 40, 30, 20]
+            },
+            {
+                data: [0, 0, 0, 10, 30, 40, 20 ]
             }]
         });
     });
