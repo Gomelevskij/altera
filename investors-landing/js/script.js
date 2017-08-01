@@ -92,7 +92,7 @@ $(document).ready(function() {
         connect: true,
         range: {
             'min': [  500000 ],
-            'max': [ 1000000 ]
+            'max': [ 50000000 ]
         }
     });
 
@@ -105,7 +105,18 @@ $(document).ready(function() {
 
     rangeSlider.noUiSlider.on('end', function( values, handle ) {
 
-        
+        console.log('oбновление графика');
+        var val = Math.round(values[handle]);
+        var x1 =  val;
+        var x2 =  val;
+        var x3 =  val;
+        var x4 =  val;
+        var x5 =  val;
+        var x6 =  val;
+        var x7 =  val;
+        updateChartFirst(x1, x2, x3, x4, x5, x6, x7);
+        updateChartSeccond(x1, x2, x3, x4, x5, x6, x7);
+        updateChartThree(x1, x2, x3, x4, x5, x6, x7);
 
     });
 
@@ -124,8 +135,10 @@ $(document).ready(function() {
     }
 
     // Chart
-    $(function () {
-        var chart = Highcharts.chart('container', {
+    var chart;
+    initChart();
+    function initChart() {
+        chart = Highcharts.chart('container', {
             chart: {
                 type: 'areaspline'
             },
@@ -168,6 +181,36 @@ $(document).ready(function() {
                 data: [0, 0, 0, 10, 30, 40, 20 ]
             }]
         });
-    });
+    }
+
+    function updateChartFirst(x1, x2, x3, x4, x5, x6, x7) {
+        chart.series[0].data[0].update(x1);
+        chart.series[0].data[1].update(x2);
+        chart.series[0].data[2].update(x3);
+        chart.series[0].data[3].update(x4);
+        chart.series[0].data[4].update(x5);
+        chart.series[0].data[5].update(x6);
+        chart.series[0].data[6].update(x7);
+    }
+
+    function updateChartSeccond(x1, x2, x3, x4, x5, x6, x7) {
+        chart.series[1].data[0].update(x1 + 3);
+        chart.series[1].data[1].update(x2 + 5);
+        chart.series[1].data[2].update(x3 + 3);
+        chart.series[1].data[3].update(x4 + 6);
+        chart.series[1].data[4].update(x5 + 43);
+        chart.series[1].data[5].update(x6 + 2);
+        chart.series[1].data[6].update(x7 + 2);
+    }
+
+    function updateChartThree(x1, x2, x3, x4, x5, x6, x7) {
+        chart.series[1].data[0].update(x1 + 5);
+        chart.series[1].data[1].update(x2 + 43);
+        chart.series[1].data[2].update(x3 + 3);
+        chart.series[1].data[3].update(x4 + 3);
+        chart.series[1].data[4].update(x5 + 23);
+        chart.series[1].data[5].update(x6 + 23);
+        chart.series[1].data[6].update(x7 + 25);
+    }
 
 });
